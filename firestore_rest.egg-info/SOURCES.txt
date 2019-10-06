@@ -1,3 +1,4 @@
+README.md
 firestore_rest
 setup.py
 firestore_rest/__init__.py

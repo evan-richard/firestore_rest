@@ -2,6 +2,13 @@
 
 A simple package to manage requests to and from the Google Cloud Firestore REST api. This package is designed to be used with Python 2.6. If you are using a newer version of python, please refer to https://firebase.google.com/docs/firestore/use-rest-api for the official python SDK.
 
+## Dependencies
+
+Dependencies:
+
+* jwt
+* requests
+
 ## Documentation
 
 ### Authentication
@@ -48,8 +55,7 @@ col_ref = doc_ref.collection('collectionName')
 
 #### Properties
 
-* Path
-A collection's path can be retrieve via the getPath() method
+* Path: a collection's path can be retrieve via the getPath() method
 
 ```
 col_ref.getPath()
@@ -75,8 +81,7 @@ col_ref = col_ref.document('documentName')
 
 #### Properties
 
-* Path
-A document's path can be retrieve via the getPath() method
+* Path: a document's path can be retrieve via the getPath() method
 
 ```
 doc_ref.getPath()

@@ -1,6 +1,6 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: firestore-rest
-Version: 1.0
+Version: 0.1
 Summary: A Firestore REST api utility package
 Home-page: https://github.com/evan-richard/firestore_rest
 Author: Evan Richard
@@ -56,22 +56,13 @@ Description: # Python Firestore REST Package
         
         #### Properties
         
-        * Path
-        A collection's path can be retrieve via the getPath() method
+        * Path: a collection's path can be retrieve via the getPath() method
         
         ```
         col_ref.getPath()
         
         # returns the fully-qualified pathname to the collection e.g. 'col/doc/subCol'
         ```
-        
-        #### Get
-        
-        Retrieve a snapshot of the current document.
-        
-        doc_ref.
-        
-        **get**()
         
         ### Document
         
@@ -91,8 +82,7 @@ Description: # Python Firestore REST Package
         
         #### Properties
         
-        * Path
-        A document's path can be retrieve via the getPath() method
+        * Path: a document's path can be retrieve via the getPath() method
         
         ```
         doc_ref.getPath()
@@ -202,7 +192,7 @@ Description: # Python Firestore REST Package
         
         ## Contributing
         
-        If you would like to help improve/add features to the package. Please feel free to branch off the github repository. I will try to make updates and review merge requests as soon as possible.
+        If you would like to help improve/add features to the package. Please feel free to branch off the github repository https://github.com/evan-richard/firestore_rest. I will try to make updates and review merge requests as soon as possible.
         
         ## Disclaimer
         
@@ -211,3 +201,4 @@ Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 2.6
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

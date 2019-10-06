@@ -5,12 +5,12 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='firestore_rest',
-     version='1.0',
+     version='0.1',
      author="Evan Richard",
      author_email="evan.richard.umd@gmail.com",
      description="A Firestore REST api utility package",
      long_description=long_description,
-     long_description_content_type="text/markdown",
+     long_description_content_type='text/markdown',
      url="https://github.com/evan-richard/firestore_rest",
      packages=setuptools.find_packages(),
      classifiers=[
