@@ -1,0 +1,10 @@
+firestore_rest
+setup.py
+firestore_rest/__init__.py
+firestore_rest/credentials.py
+firestore_rest/firestore.py
+firestore_rest/firestore_utils.py
+firestore_rest.egg-info/PKG-INFO
+firestore_rest.egg-info/SOURCES.txt
+firestore_rest.egg-info/dependency_links.txt
+firestore_rest.egg-info/top_level.txt
