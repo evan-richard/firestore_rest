@@ -57,14 +57,6 @@ col_ref.getPath()
 # returns the fully-qualified pathname to the collection e.g. 'col/doc/subCol'
 ```
 
-#### Get
-
-Retrieve a snapshot of the current document.
-
-doc_ref.
-
-**get**()
-
 ### Document
 
 This class represents *Firestore Documents*
@@ -194,7 +186,7 @@ batch.commit()
 
 ## Contributing
 
-If you would like to help improve/add features to the package. Please feel free to branch off the github repository. I will try to make updates and review merge requests as soon as possible.
+If you would like to help improve/add features to the package. Please feel free to branch off the github repository https://github.com/evan-richard/firestore_rest. I will try to make updates and review merge requests as soon as possible.
 
 ## Disclaimer
 
