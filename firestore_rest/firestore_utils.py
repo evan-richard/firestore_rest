@@ -23,25 +23,25 @@ def formatDictType(payload, updateFields, parentKey=''):
     for key, val in payload.iteritems():
         valueType = type(val)
         key = str(key)
-        if valueType is None:
-            data.update({ key: { 'nullValue': val } })
-        if valueType is int:
+        if val is None:
+            data.update({ key: { 'nullValue': None } })
+        elif valueType is int:
             data.update({ key: { 'integerValue': val } })
-        if valueType is float:
+        elif valueType is float:
             data.update({ key: { 'doubleValue': val } })
-        if valueType is str:
+        elif valueType is str:
             data.update({ key: { 'stringValue': val } })
-        if valueType is unicode:
+        elif valueType is unicode:
             data.update({ key: { 'stringValue': str(val) } })
-        if valueType is bool:
+        elif valueType is bool:
             data.update({ key: { 'booleanValue': val } })
-        if valueType is datetime:
+        elif valueType is datetime:
            data.update({ key: { 'timestampValue': str(val).replace(' ', 'T') } })
-        if valueType is list:
+        elif valueType is list:
             formattedList = formatListType(val, updateFields)
             data.update({ key: { 'arrayValue':  formattedList } })
-        if valueType is dict:
-            formattedDict = formatDictType(val, updateFields, (key + '.'))
+        elif valueType is dict:
+            formattedDict = formatDictType(val, updateFields, (parentKey + key + '.'))
             data.update({ key: { 'mapValue': { 'fields': formattedDict } } })
     return data
 
@@ -61,24 +61,24 @@ def formatListType(lst, updateFields):
     data = {'values': []}
     for val in lst:
         valueType = type(val)
-        if valueType is None:
-            data['values'].append({ 'nullValue': val })
-        if valueType is int:
+        if val is None:
+            data['values'].append({ 'nullValue': None })
+        elif valueType is int:
             data['values'].append({ 'integerValue': val })
-        if valueType is float:
+        elif valueType is float:
             data['values'].append({ 'doubleValue': val })
-        if valueType is str:
+        elif valueType is str:
             data['values'].append({ 'stringValue': val })
-        if valueType is unicode:
+        elif valueType is unicode:
             data['values'].append({ 'stringValue': str(val) })
-        if valueType is bool:
+        elif valueType is bool:
             data['values'].append({ 'booleanValue': val })
-        if valueType is datetime:
+        elif valueType is datetime:
             data['values'].append({ 'timestampValue': str(val).replace(' ', 'T') })
-        if valueType is list:
+        elif valueType is list:
             formattedList = formatListType(val, updateFields)
             data['values'].append({ 'arrayValue': formattedList })
-        if valueType is dict:
+        elif valueType is dict:
             formattedDict = formatDictType(val, updateFields)
             data['values'].append({ 'mapValue': { 'fields': formattedDict } })
     return data
